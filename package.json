@@ -1,5 +1,5 @@
 {
-  "name": "test_app_for_heroku_with_docker-compose",
+  "name": "APP_NAME",
   "private": true,
   "dependencies": {}
 }

@@ -26,13 +26,13 @@ default: &default
 
 development:
   <<: *default
-  database: test_app_for_heroku_with_docker-compose_development
+  database: APP_NAME_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user that initialized the database.
-  #username: test_app_for_heroku_with_docker-compose
+  #username: APP_NAME
 
   # The password associated with the postgres role (username).
   #password:
@@ -60,7 +60,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: test_app_for_heroku_with_docker-compose_test
+  database: APP_NAME_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -83,6 +83,6 @@ test:
 #
 production:
   <<: *default
-  database: test_app_for_heroku_with_docker-compose_production
-  username: test_app_for_heroku_with_docker-compose
-  password: <%= ENV['TEST_APP_FOR_HEROKU_WITH_DOCKER-COMPOSE_DATABASE_PASSWORD'] %>
+  database: APP_NAME_production
+  username: APP_NAME
+  password: <%= ENV['APP_NAME_DATABASE_PASSWORD'] %>

@@ -1,6 +1,6 @@
 FROM ruby:2.5.3
 
-ENV HOME /test_app_for_heroku_with_docker-compose
+ENV HOME /APP_NAME
 WORKDIR $HOME
 
 ADD Gemfile      $HOME/Gemfile
